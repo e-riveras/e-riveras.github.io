@@ -1,6 +1,6 @@
 :root {
-  --bs-primary: #e11d48; /* Magenta/Pink */
-  --bs-primary-rgb: 225, 29, 72;
+  --bs-primary: #f97316; /* Orange */
+  --bs-primary-rgb: 249, 115, 22;
   --bs-secondary: #64748b;
   --bs-body-bg: #0f172a; /* Deep Navy Blue */
   --bs-body-color: #f1f5f9;
@@ -33,8 +33,8 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #be123c !important; /* Darker Pink */
-  border-color: #be123c !important;
+  background-color: #ea580c !important; /* Darker Orange */
+  border-color: #ea580c !important;
 }
 
 .btn-outline-secondary {
@@ -72,7 +72,7 @@ hr {
 
 /* Hero Section Highlights */
 h1.display-4 {
-  background: -webkit-linear-gradient(45deg, #f8fafc, #e11d48);
+  background: -webkit-linear-gradient(45deg, #f8fafc, #f97316);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

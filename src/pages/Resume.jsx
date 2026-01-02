@@ -37,11 +37,9 @@ function Resume() {
               <Card.Text>
                 <strong>Distinction:</strong> Graduated cum laude (Distinction).<br />
                 <strong>Thesis:</strong> "Wage Inequality in Chile" (Desigualdad de salarios en un modelo con heterogeneidad de habilidades).<br />
-                <ul>
-                    <li>Advisor: Elton Dusha.</li>
-                    <li>Funding: Supported by Anillo Soc 1402 Scholarship.</li>
-                    <li>Details: Developed a structural search model with Markov chains to identify a stationary state of skill distribution and analyzed sources of wage inequality using national survey data (CASEN).</li>
-                </ul>
+                Advisor: Elton Dusha.<br />
+                Funding: Supported by Anillo Soc 1402 Scholarship.<br />
+                Details: Developed a structural search model with Markov chains to identify a stationary state of skill distribution and analyzed sources of wage inequality using national survey data (CASEN).
               </Card.Text>
             </Card.Body>
           </Card>
@@ -74,12 +72,10 @@ function Resume() {
               <Card.Title>Graduate Research Assistant</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Talhouk Research Lab, UBC Faculty of Medicine | Vancouver, BC | 2025 – Present</Card.Subtitle>
               <Card.Text>
-                <ul>
-                  <li><strong>Health Economics & Data Governance:</strong> Developing secure, reproducible analytical pipelines in R to study health outcomes across distributed networks.</li>
-                  <li><strong>Privacy Tech:</strong> Implementing federated learning protocols to ensure strict privacy compliance for sensitive health data.</li>
-                  <li><strong>Methodology:</strong> Designing standardized meta-analysis frameworks to validate multi-site health data.</li>
-                  <li><strong>Reproducibility:</strong> Engineering automated workflows using renv and Git for partner institutions.</li>
-                </ul>
+                <strong>Health Economics & Data Governance:</strong> Developing secure, reproducible analytical pipelines in R to study health outcomes across distributed networks.<br />
+                <strong>Privacy Tech:</strong> Implementing federated learning protocols to ensure strict privacy compliance for sensitive health data.<br />
+                <strong>Methodology:</strong> Designing standardized meta-analysis frameworks to validate multi-site health data.<br />
+                <strong>Reproducibility:</strong> Engineering automated workflows using renv and Git for partner institutions.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -89,12 +85,10 @@ function Resume() {
               <Card.Title>Research Assistant</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Millenium Institute for Market Imperfections and Public Policy | Santiago, Chile | 2015 – 2016</Card.Subtitle>
               <Card.Text>
-                <strong>Supervisors:</strong> Patricio Valenzuela, Andrea Peroni, Benjamin Villena.
-                <ul>
-                  <li><strong>Evaluation Design:</strong> Co-authored official methodological manuals for the National Training and Employment Service (SENCE), establishing micro-econometric standards for government program evaluation.</li>
-                  <li><strong>Impact Evaluation:</strong> Designed identification strategies and survey instruments for the "Más Capaz" program evaluation (large-scale labor intervention).</li>
-                  <li><strong>Data Enrichment:</strong> Supported Professor Benjamin Villena using data mining and geo-referencing techniques to enrich administrative datasets for labor market research.</li>
-                </ul>
+                <strong>Supervisors:</strong> Patricio Valenzuela, Andrea Peroni, Benjamin Villena.<br />
+                <strong>Evaluation Design:</strong> Co-authored official methodological manuals for the National Training and Employment Service (SENCE), establishing micro-econometric standards for government program evaluation.<br />
+                <strong>Impact Evaluation:</strong> Designed identification strategies and survey instruments for the "Más Capaz" program evaluation (large-scale labor intervention).<br />
+                <strong>Data Enrichment:</strong> Supported Professor Benjamin Villena using data mining and geo-referencing techniques to enrich administrative datasets for labor market research.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -132,11 +126,9 @@ function Resume() {
               <Card.Title>Market Study on Public Procurement (EM05, 2020)</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Role: Co-author</Card.Subtitle>
               <Card.Text>
-                <ul>
-                    <li><strong>Scope:</strong> Empirical analysis of the ~$12B USD/year Chilean state purchasing system.</li>
-                    <li><strong>Methodology:</strong> Stratified sampling of 400 tenders; structural analysis of bidder participation and direct contracts.</li>
-                    <li><strong>Impact:</strong> Grounded the 2021 legislative reform to Law N° 19.886 (Public Procurement).</li>
-                </ul>
+                <strong>Scope:</strong> Empirical analysis of the ~2B USD/year Chilean state purchasing system.<br />
+                <strong>Methodology:</strong> Stratified sampling of 400 tenders; structural analysis of bidder participation and direct contracts.<br />
+                <strong>Impact:</strong> Grounded the 2021 legislative reform to Law N° 19.886 (Public Procurement).
               </Card.Text>
             </Card.Body>
           </Card>
@@ -146,11 +138,9 @@ function Resume() {
               <Card.Title>Market Study on Pharmaceuticals (EM03, 2020)</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Role: Co-author</Card.Subtitle>
               <Card.Text>
-                <ul>
-                    <li><strong>Scope:</strong> Vertical analysis of the pharmaceutical value chain (labs to retail).</li>
-                    <li><strong>Findings:</strong> Identified market failures in bioequivalence, vertical integration, and brand loyalty.</li>
-                    <li><strong>Impact:</strong> Proposed structural remedies (mandatory INN prescribing) informing the "Ley de Fármacos II" bill.</li>
-                </ul>
+                <strong>Scope:</strong> Vertical analysis of the pharmaceutical value chain (labs to retail).<br />
+                <strong>Findings:</strong> Identified market failures in bioequivalence, vertical integration, and brand loyalty.<br />
+                <strong>Impact:</strong> Proposed structural remedies (mandatory INN prescribing) informing the "Ley de Fármacos II" bill.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -160,11 +150,9 @@ function Resume() {
               <Card.Title>Market Study on Textbooks (EM04, 2019)</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Role: Co-author</Card.Subtitle>
               <Card.Text>
-                <ul>
-                    <li><strong>Scope:</strong> Analysis of public procurement vs. private choice in educational publishing.</li>
-                    <li><strong>Findings:</strong> Diagnosed principal-agent problems in private school selection and auction inefficiencies.</li>
-                    <li><strong>Impact:</strong> Led to the unbundling of content development from printing services in state auctions.</li>
-                </ul>
+                <strong>Scope:</strong> Analysis of public procurement vs. private choice in educational publishing.<br />
+                <strong>Findings:</strong> Diagnosed principal-agent problems in private school selection and auction inefficiencies.<br />
+                <strong>Impact:</strong> Led to the unbundling of content development from printing services in state auctions.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -180,10 +168,8 @@ function Resume() {
               <Card.Title>Data Analyst</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">PlayStudios | Vancouver, BC | Apr 2025 – Aug 2025</Card.Subtitle>
               <Card.Text>
-                <ul>
-                  <li><strong>Experimental Economics:</strong> Designed/analyzed large-scale A/B tests for user behavior and retention.</li>
-                  <li><strong>Behavioral Modeling:</strong> Applied micro-econometric models (survival analysis, churn prediction) to analyze response to incentives.</li>
-                </ul>
+                <strong>Experimental Economics:</strong> Designed/analyzed large-scale A/B tests for user behavior and retention.<br />
+                <strong>Behavioral Modeling:</strong> Applied micro-econometric models (survival analysis, churn prediction) to analyze response to incentives.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -193,12 +179,10 @@ function Resume() {
               <Card.Title>Senior Economic and Financial Analyst</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Banco Central de Chile | Santiago, Chile | Sep 2022 – May 2024</Card.Subtitle>
               <Card.Text>
-                <ul>
-                  <li><strong>Monetary Policy Infrastructure:</strong> Implemented deep learning models (LSTM) to detect anomalies in banking supervision reports.</li>
-                  <li><strong>Institutional Reporting:</strong> Authored recurring financial stability reports for the IMF and BIS.</li>
-                  <li><strong>Capacity Building:</strong> Spearheaded the creation of new high-frequency statistical series for real-time monitoring.</li>
-                  <li><strong>Modernization:</strong> Updated official UF (Unidad de Fomento) calculation processes and dashboards using PowerBI.</li>
-                </ul>
+                <strong>Monetary Policy Infrastructure:</strong> Implemented deep learning models (LSTM) to detect anomalies in banking supervision reports.<br />
+                <strong>Institutional Reporting:</strong> Authored recurring financial stability reports for the IMF and BIS.<br />
+                <strong>Capacity Building:</strong> Spearheaded the creation of new high-frequency statistical series for real-time monitoring.<br />
+                <strong>Modernization:</strong> Updated official UF (Unidad de Fomento) calculation processes and dashboards using PowerBI.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -208,12 +192,10 @@ function Resume() {
               <Card.Title>Economist</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Fiscalía Nacional Económica (Antitrust Agency) | Santiago, Chile | Aug 2018 – Aug 2022</Card.Subtitle>
               <Card.Text>
-                <em>Studies Division (2018-2020), Antitrust Division/Intelligence Unit (2020-2022).</em>
-                <ul>
-                  <li><strong>IO & Antitrust:</strong> Screened for market power abuses; developed algorithmic tools to detect bid-rigging collusion.</li>
-                  <li><strong>Forensic Economics:</strong> Used NLP/ML to structure administrative data for investigations.</li>
-                  <li><strong>Technical Support:</strong> Collaborated with police units (OS9) on digital forensics and data retrieval.</li>
-                </ul>
+                <em>Studies Division (2018-2020), Antitrust Division/Intelligence Unit (2020-2022).</em><br />
+                <strong>IO & Antitrust:</strong> Screened for market power abuses; developed algorithmic tools to detect bid-rigging collusion.<br />
+                <strong>Forensic Economics:</strong> Used NLP/ML to structure administrative data for investigations.<br />
+                <strong>Technical Support:</strong> Collaborated with police units (OS9) on digital forensics and data retrieval.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -223,12 +205,10 @@ function Resume() {
               <Card.Title>Risk Specialist</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">BancoEstado Microempresas | Santiago, Chile | Oct 2017 – 2018</Card.Subtitle>
               <Card.Text>
-                 <em>Department: Risk Management.</em>
-                <ul>
-                  <li><strong>Modeling:</strong> Created risk scoring models using generalized regression neural networks to support pre-approval campaigns.</li>
-                  <li><strong>Optimization:</strong> Developed non-linear optimization tools to generate interest rate tiers for customer subgroups.</li>
-                  <li><strong>Tools:</strong> Python, R.</li>
-                </ul>
+                 <em>Department: Risk Management.</em><br />
+                 <strong>Modeling:</strong> Created risk scoring models using generalized regression neural networks to support pre-approval campaigns.<br />
+                 <strong>Optimization:</strong> Developed non-linear optimization tools to generate interest rate tiers for customer subgroups.<br />
+                 <strong>Tools:</strong> Python, R.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -269,7 +249,6 @@ function Resume() {
           </Card>
         </Col>
       </Row>
-
 
       <Row className="mb-4">
         <Col>
