@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 
 function Resume() {
   return (
-    <Container className="py-5">
+    <Container id="resume" className="py-5">
       <div className="text-center mb-5">
         <h2 className="mb-2">EDUARDO RIVERA SILVA</h2>
         <h5 className="text-muted mb-3">Labor Economics | Industrial Organization | Computational Economics</h5>
@@ -289,8 +289,8 @@ function Resume() {
         <Col>
             <h3 className="border-bottom pb-2 mb-3">Languages</h3>
             <div className="d-flex flex-wrap gap-2">
-                <span className="badge bg-light text-dark border fs-6">Spanish: Native</span>
-                <span className="badge bg-light text-dark border fs-6">English: Advanced (C1 IELTS certified)</span>
+                <span className="badge bg-primary fs-6">Spanish: Native</span>
+                <span className="badge bg-primary fs-6">English: Advanced (C1 IELTS certified)</span>
             </div>
         </Col>
       </Row>

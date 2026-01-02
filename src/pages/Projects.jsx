@@ -28,7 +28,7 @@ function Projects() {
   ];
 
   return (
-    <Container className="py-5">
+    <Container id="projects" className="py-5">
       <h2 className="mb-5 text-center">My Projects</h2>
       <Row xs={1} md={2} lg={3} className="g-4">
         {projects.map((project, index) => (
