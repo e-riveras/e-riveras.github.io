@@ -1,78 +1,28 @@
-:root {
-  --bs-primary: #f97316; /* Orange */
-  --bs-primary-rgb: 249, 115, 22;
-  --bs-secondary: #64748b;
-  --bs-body-bg: #0f172a; /* Deep Navy Blue */
-  --bs-body-color: #f1f5f9;
-  --bs-card-bg: #1e293b; /* Lighter Navy for cards */
-}
-
+/* Global Styles */
 body {
-  background-color: var(--bs-body-bg) !important;
-  color: var(--bs-body-color) !important;
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  /* Quartz uses a specific background, we let it apply */
 }
 
-/* Navbar overrides */
+/* Navbar Transparency for Glassmorphism effect */
 .navbar {
-  background-color: rgba(15, 23, 42, 0.95) !important; /* Semi-transparent navy */
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #334155;
+  /* Use the theme's dark color with some transparency */
+  background-color: rgba(22, 28, 35, 0.85) !important; 
 }
 
-.navbar-brand {
-  font-weight: 700;
-  color: #f1f5f9 !important;
-  letter-spacing: 0.5px;
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Button overrides */
-.btn-primary {
-  background-color: var(--bs-primary) !important;
-  border-color: var(--bs-primary) !important;
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
-.btn-primary:hover {
-  background-color: #ea580c !important; /* Darker Orange */
-  border-color: #ea580c !important;
-}
-
-.btn-outline-secondary {
-  color: #94a3b8;
-  border-color: #94a3b8;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #94a3b8;
-  color: #0f172a;
-}
-
-/* Card overrides */
-.card {
-  background-color: var(--bs-card-bg);
-  border: 1px solid #334155;
-}
-
-.card-title {
-  color: #f8fafc;
-}
-
-.card-subtitle {
-  color: #94a3b8 !important;
-}
-
-.text-muted {
-  color: #94a3b8 !important;
-}
-
-hr {
-  border-color: #334155;
-  opacity: 0.5;
-}
-
-/* Hero Section Highlights */
-h1.display-4 {
-  background: -webkit-linear-gradient(45deg, #f8fafc, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Adjustments for spacing */
+section {
+  padding: 60px 0;
 }
