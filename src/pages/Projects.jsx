@@ -7,21 +7,21 @@ function Projects() {
     {
       title: 'Sleep Disorder Analysis',
       description: 'Investigated the link between sleep quality and stress using the "Sleep Health and Lifestyle Dataset". Developed a reproducible regression model pipeline using Docker, Make, and GitHub Actions to predict stress levels based on physiological and lifestyle factors. (UBC MDS Project)',
-      imageUrl: '', 
+      imageUrl: 'https://placehold.co/600x400/2c3e50/ffffff?text=Sleep+Disorder+Analysis', 
       link: '',
       repoLink: 'https://github.com/e-riveras/sleep-disorder-analysis'
     },
     {
       title: 'Market Study on Public Procurement',
       description: 'Co-authored a comprehensive empirical analysis of the ~$12B USD/year Chilean state purchasing system. Utilized stratified sampling and structural analysis to identify inefficiencies, directly grounding the 2021 legislative reform to Law N° 19.886.',
-      imageUrl: '',
+      imageUrl: 'https://placehold.co/600x400/27ae60/ffffff?text=Public+Procurement+Study',
       link: 'https://www.fne.gob.cl/en/market-studies/market-studies-carried-out/',
       repoLink: ''
     },
      {
       title: 'Anomaly Detection in Banking Supervision',
       description: 'Implemented deep learning models (LSTM) at the Central Bank of Chile to detect anomalies in banking supervision reports, enhancing the real-time monitoring capabilities of financial stability.',
-      imageUrl: '',
+      imageUrl: 'https://placehold.co/600x400/2980b9/ffffff?text=Anomaly+Detection+Banking',
       link: '',
       repoLink: ''
     },
