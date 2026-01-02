@@ -5,24 +5,24 @@ import ProjectCard from '../components/ProjectCard';
 function Projects() {
   const projects = [
     {
-      title: 'Project One',
-      description: 'A brief description of your first project. Explain what tech stack you used and the problem it solves.',
-      imageUrl: '', // Add image URL here
-      link: 'https://example.com',
-      repoLink: 'https://github.com/yourusername/project-one'
+      title: 'Sleep Disorder Analysis',
+      description: 'Investigated the link between sleep quality and stress using the "Sleep Health and Lifestyle Dataset". Developed a reproducible regression model pipeline using Docker, Make, and GitHub Actions to predict stress levels based on physiological and lifestyle factors. (UBC MDS Project)',
+      imageUrl: '', 
+      link: '',
+      repoLink: 'https://github.com/e-riveras/sleep-disorder-analysis'
     },
     {
-      title: 'Project Two',
-      description: 'Another interesting project showcasing your skills in frontend or backend development.',
+      title: 'Market Study on Public Procurement',
+      description: 'Co-authored a comprehensive empirical analysis of the ~$12B USD/year Chilean state purchasing system. Utilized stratified sampling and structural analysis to identify inefficiencies, directly grounding the 2021 legislative reform to Law N° 19.886.',
       imageUrl: '',
-      link: '',
-      repoLink: 'https://github.com/yourusername/project-two'
+      link: 'https://www.fne.gob.cl/en/market-studies/market-studies-carried-out/',
+      repoLink: ''
     },
      {
-      title: 'Project Three',
-      description: 'A third project to demonstrate versatility. Maybe a mobile app or a data science script.',
+      title: 'Anomaly Detection in Banking Supervision',
+      description: 'Implemented deep learning models (LSTM) at the Central Bank of Chile to detect anomalies in banking supervision reports, enhancing the real-time monitoring capabilities of financial stability.',
       imageUrl: '',
-      link: 'https://example.com',
+      link: '',
       repoLink: ''
     },
   ];
