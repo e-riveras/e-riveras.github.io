@@ -7,7 +7,7 @@ function Projects() {
     {
       title: 'Sleep Disorder Analysis',
       description: 'Investigated the link between sleep quality and stress using the "Sleep Health and Lifestyle Dataset". Developed a reproducible regression model pipeline using Docker, Make, and GitHub Actions to predict stress levels based on physiological and lifestyle factors. (UBC MDS Project)',
-      imageUrl: 'https://images.unsplash.com/photo-1541781777746-f2ed1d63e495?auto=format&fit=crop&w=600&q=80', 
+      imageUrl: 'https://images.unsplash.com/photo-1511296933631-18b512d58f0e?auto=format&fit=crop&w=600&q=80', 
       link: '',
       repoLink: 'https://github.com/e-riveras/sleep-disorder-analysis'
     },
