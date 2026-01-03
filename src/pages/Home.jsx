@@ -21,7 +21,7 @@ function Home() {
         </Col>
         <Col lg={6} className="d-none d-lg-block text-center">
             <img 
-              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" 
+              src="/profile.jpg" 
               alt="Eduardo Rivera Silva" 
               className="rounded-circle shadow-lg"
               style={{ width: '350px', height: '350px', objectFit: 'cover' }}
