@@ -7,21 +7,21 @@ function Projects() {
     {
       title: 'Sleep Disorder Analysis',
       description: 'Investigated the link between sleep quality and stress using the "Sleep Health and Lifestyle Dataset". Developed a reproducible regression model pipeline using Docker, Make, and GitHub Actions to predict stress levels based on physiological and lifestyle factors. (UBC MDS Project)',
-      imageUrl: 'https://placehold.co/600x400/2c3e50/ffffff?text=Sleep+Disorder+Analysis', 
+      imageUrl: 'https://images.unsplash.com/photo-1541781777746-f2ed1d63e495?auto=format&fit=crop&w=600&q=80', 
       link: '',
       repoLink: 'https://github.com/e-riveras/sleep-disorder-analysis'
     },
     {
       title: 'Market Study on Public Procurement',
       description: 'Co-authored a comprehensive empirical analysis of the ~$12B USD/year Chilean state purchasing system. Utilized stratified sampling and structural analysis to identify inefficiencies, directly grounding the 2021 legislative reform to Law N° 19.886.',
-      imageUrl: 'https://placehold.co/600x400/27ae60/ffffff?text=Public+Procurement+Study',
+      imageUrl: 'https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?auto=format&fit=crop&w=600&q=80',
       link: 'https://www.fne.gob.cl/en/market-studies/market-studies-carried-out/',
       repoLink: ''
     },
      {
       title: 'Anomaly Detection in Banking Supervision',
       description: 'Implemented deep learning models (LSTM) at the Central Bank of Chile to detect anomalies in banking supervision reports, enhancing the real-time monitoring capabilities of financial stability.',
-      imageUrl: 'https://placehold.co/600x400/2980b9/ffffff?text=Anomaly+Detection+Banking',
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
       link: '',
       repoLink: ''
     },
