@@ -1,7 +1,15 @@
 /* Global Styles */
 body {
   min-height: 100vh;
-  /* Quartz uses a specific background, we let it apply */
+  background-color: #0f172a !important;
+  background-image: none !important; /* Remove Quartz gradient */
+  color: #f1f5f9 !important;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Ensure the main container also has no background overrides */
+#root, .d-flex.flex-column {
+  background-color: #0f172a !important;
 }
 
 /* Navbar Transparency for Glassmorphism effect */
