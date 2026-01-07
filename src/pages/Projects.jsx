@@ -5,6 +5,13 @@ import ProjectCard from '../components/ProjectCard';
 function Projects() {
   const projects = [
     {
+      title: 'Economic Indicators & Presidential Approval',
+      description: 'Research project analyzing the causal relationship between economic indicators and US Presidential approval ratings. Investigates whether voters vote with their wallets.',
+      imageUrl: 'https://images.unsplash.com/photo-1573167101669-476636128bec?auto=format&fit=crop&w=600&q=80',
+      link: '',
+      repoLink: 'https://github.com/e-riveras/WALLET-VOTE-RESEARCH'
+    },
+    {
       title: 'Sleep Disorder Analysis',
       description: 'Investigated the link between sleep quality and stress using the "Sleep Health and Lifestyle Dataset". Developed a reproducible regression model pipeline using Docker, Make, and GitHub Actions to predict stress levels based on physiological and lifestyle factors. (UBC MDS Project)',
       imageUrl: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
