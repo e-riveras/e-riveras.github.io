@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getProjects } from '../../lib';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((project) => ({ params: { id: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { title, summary, tags, image, imageAlt, year, repo, demo, kind } = project.data;
+const { Content } = await render(project);
+---
+
+<Base title={title} description={summary}>
+  <article class="wrap section">
+    <a class="back" href="/projects/">← Projects</a>
+    <header>
+      <p class="eyebrow">{year} · {kind === 'code' ? 'Project' : 'Policy and industry work'}</p>
+      <h1>{title}</h1>
+      <p class="lede">{summary}</p>
+      <ul class="tags">{tags.map((t) => <li>{t}</li>)}</ul>
+      {
+        (repo || demo) && (
+          <p class="links">
+            {repo && <a href={repo}>View code ↗</a>}
+            {demo && <a href={demo}>{kind === 'work' ? 'Source ↗' : 'Live demo ↗'}</a>}
+          </p>
+        )
+      }
+    </header>
+    {image && <Image src={image} alt={imageAlt ?? ''} widths={[800, 1400]} sizes="(max-width: 960px) 100vw, 960px" class="hero" />}
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .back {
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  header {
+    max-width: var(--prose);
+    margin: 1.5rem 0 2rem;
+  }
+  h1 {
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
+    margin: 0.5rem 0 0.75rem;
+  }
+  .lede {
+    font-size: 1.125rem;
+    color: var(--muted);
+    margin: 0 0 1rem;
+  }
+  .links {
+    display: flex;
+    gap: 1.25rem;
+    margin: 1.25rem 0 0;
+  }
+  .links a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .hero {
+    max-width: 60rem;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    margin-bottom: 2.5rem;
+    background: #fff;
+  }
+</style>

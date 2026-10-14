@@ -1,0 +1,114 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  large?: boolean;
+}
+
+const { project, large = false } = Astro.props;
+const { title, summary, tags, image, imageAlt, year, repo, demo } = project.data;
+const href = `/projects/${project.id}/`;
+---
+
+<article class:list={['card', { large }]}>
+  {
+    image && (
+      <a href={href} class="media" tabindex="-1" aria-hidden="true">
+        <Image src={image} alt={imageAlt ?? ''} widths={[480, 800, 1200]} sizes="(max-width: 720px) 100vw, 560px" />
+      </a>
+    )
+  }
+  <div class="body">
+    <p class="eyebrow">{year}</p>
+    <h3><a href={href}>{title}</a></h3>
+    <p class="summary">{summary}</p>
+    <ul class="tags">{tags.map((t) => <li>{t}</li>)}</ul>
+    {
+      (repo || demo) && (
+        <p class="links">
+          {repo && <a href={repo}>Code ↗</a>}
+          {demo && <a href={demo}>{project.data.kind === 'work' ? 'Source ↗' : 'Live ↗'}</a>}
+        </p>
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 100%;
+    transition: border-color 0.15s;
+  }
+  .card:hover {
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  }
+  .media {
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    background: var(--code-bg);
+  }
+  .media :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    flex: 1;
+  }
+  .eyebrow {
+    margin: 0;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+  h3 a {
+    text-decoration: none;
+  }
+  h3 a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .card {
+    position: relative;
+  }
+  .summary {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9375rem;
+  }
+  .tags {
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+  .links {
+    display: flex;
+    gap: 1rem;
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+  }
+  .links a {
+    position: relative;
+    z-index: 1;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .large h3 {
+    font-size: 1.25rem;
+  }
+</style>

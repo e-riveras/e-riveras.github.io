@@ -1,0 +1,211 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { profile, experience } from '../data/cv';
+import { getProjects, getPosts, formatDate } from '../lib';
+import portrait from '../assets/profile.jpg';
+
+const projects = await getProjects();
+const featured = projects.filter((p) => p.data.featured && p.data.kind === 'code');
+const work = projects.filter((p) => p.data.kind === 'work');
+const posts = (await getPosts()).slice(0, 3);
+---
+
+<Base>
+  <section class="wrap hero">
+    <div class="intro">
+      <p class="eyebrow">{profile.headline} · {profile.location}</p>
+      <h1>{profile.name}</h1>
+      <p class="lede">{profile.tagline}</p>
+      <ul class="tags">{profile.interests.map((i) => <li>{i}</li>)}</ul>
+      <p class="actions">
+        <a class="btn primary" href="/projects/">See projects</a>
+        <a class="btn" href="/cv.pdf">Download CV</a>
+        <a class="btn" href={profile.github}>GitHub</a>
+        <a class="btn" href={profile.linkedin}>LinkedIn</a>
+      </p>
+    </div>
+    <Image src={portrait} alt={profile.name} width={240} height={240} class="portrait" loading="eager" />
+  </section>
+
+  <section class="wrap section">
+    <div class="section-head">
+      <h2>Selected projects</h2>
+      <a href="/projects/">All projects →</a>
+    </div>
+    <div class="grid">{featured.map((p) => <ProjectCard project={p} large />)}</div>
+  </section>
+
+  <section class="wrap section">
+    <div class="section-head">
+      <h2>Policy and industry work</h2>
+    </div>
+    <div class="grid grid-3">{work.map((p) => <ProjectCard project={p} />)}</div>
+  </section>
+
+  <section class="wrap section split">
+    <div>
+      <div class="section-head">
+        <h2>Experience</h2>
+        <a href="/cv/">Full CV →</a>
+      </div>
+      <ol class="timeline">
+        {
+          experience.map((e) => (
+            <li>
+              <span class="when">{e.dates}</span>
+              <span>
+                <strong>{e.title}</strong>
+                <span class="org">{e.org}</span>
+              </span>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+    <div>
+      <div class="section-head">
+        <h2>Writing</h2>
+        <a href="/posts/">All posts →</a>
+      </div>
+      <ul class="posts">
+        {
+          posts.map((p) => (
+            <li>
+              <a href={`/posts/${p.id}/`}>{p.data.title}</a>
+              <time datetime={p.data.date.toISOString()}>{formatDate(p.data.date)}</time>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+    padding-block: 4.5rem 2rem;
+  }
+  h1 {
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    margin: 0.5rem 0 1rem;
+  }
+  .lede {
+    font-size: 1.1875rem;
+    color: var(--muted);
+    max-width: 38rem;
+    margin: 0 0 1.25rem;
+  }
+  .portrait {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--line);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin: 1.75rem 0 0;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-decoration: none;
+    background: var(--surface);
+  }
+  .btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+  .btn.primary:hover {
+    color: var(--bg);
+    filter: brightness(1.1);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  }
+  .split {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+  }
+  .timeline,
+  .posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 1rem;
+    padding-block: 0.75rem;
+    border-top: 1px solid var(--line);
+  }
+  .when {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--faint);
+    padding-top: 0.2rem;
+  }
+  .org {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9375rem;
+  }
+  .posts li {
+    display: flex;
+    flex-direction: column;
+    padding-block: 0.75rem;
+    border-top: 1px solid var(--line);
+  }
+  .posts a {
+    font-weight: 550;
+    text-decoration: none;
+  }
+  .posts time {
+    font-size: 0.8125rem;
+    color: var(--faint);
+  }
+  @media (max-width: 860px) {
+    .split {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 720px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding-top: 2.5rem;
+      gap: 1.5rem;
+    }
+    .portrait {
+      order: -1;
+      width: 112px;
+      height: 112px;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .timeline li {
+      grid-template-columns: 1fr;
+      gap: 0.125rem;
+    }
+  }
+</style>

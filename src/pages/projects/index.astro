@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getProjects } from '../../lib';
+
+const projects = await getProjects();
+const code = projects.filter((p) => p.data.kind === 'code');
+const work = projects.filter((p) => p.data.kind === 'work');
+---
+
+<Base title="Projects" description="Data science, statistics and machine learning projects by Eduardo Rivera Silva.">
+  <div class="wrap section">
+    <h1>Projects</h1>
+    <p class="lede">Open-source analyses and tools, then work from my time at Chile's antitrust agency and central bank.</p>
+
+    <h2 class="sub">Code</h2>
+    <div class="grid">{code.map((p) => <ProjectCard project={p} />)}</div>
+
+    <h2 class="sub">Policy and industry work</h2>
+    <div class="grid">{work.map((p) => <ProjectCard project={p} />)}</div>
+  </div>
+</Base>
+
+<style>
+  h1 {
+    font-size: 2.25rem;
+  }
+  .lede {
+    color: var(--muted);
+    max-width: 38rem;
+    margin: 0.75rem 0 0;
+  }
+  .sub {
+    font-size: 1.125rem;
+    margin: 3rem 0 1.25rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.25rem;
+  }
+</style>

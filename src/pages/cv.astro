@@ -1,0 +1,181 @@
+---
+import Base from '../layouts/Base.astro';
+import CvSection from '../components/CvSection.astro';
+import { profile, experience, education, reports, teaching, service, skills, languages } from '../data/cv';
+
+const host = (u: string) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+---
+
+<Base title="CV" description={`Curriculum vitae of ${profile.name}.`}>
+  <div class="wrap section">
+    <div class="cv">
+      <header>
+        <div>
+          <h1>{profile.name}</h1>
+          <p class="headline">{profile.headline}</p>
+          <p class="contact">
+            <span>{profile.location}</span>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+            <a href={profile.github}>{host(profile.github)}</a>
+            <a href={profile.linkedin}>{host(profile.linkedin)}</a>
+          </p>
+        </div>
+        <a class="pdf" href="/cv.pdf">Download PDF</a>
+      </header>
+
+      <CvSection title="Experience" entries={experience} />
+      <CvSection title="Education" entries={education} />
+      <CvSection title="Policy reports and market studies" entries={reports} />
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <dl>
+          {
+            skills.map((s) => (
+              <>
+                <dt>{s.label}</dt>
+                <dd>{s.items}</dd>
+              </>
+            ))
+          }
+          <dt>Spoken</dt>
+          <dd>{languages.join(', ')}</dd>
+        </dl>
+      </section>
+
+      <CvSection title="Teaching" entries={teaching} />
+      <CvSection title="Service and leadership" entries={service} />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .cv {
+    max-width: 48rem;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  .headline {
+    margin: 0.25rem 0 0.75rem;
+    color: var(--muted);
+    font-size: 1.125rem;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+  .contact a {
+    text-decoration: none;
+  }
+  .pdf {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .pdf:hover {
+    color: var(--bg);
+    filter: brightness(1.1);
+  }
+  .skills {
+    margin-top: 2.25rem;
+  }
+  .skills h2 {
+    font-size: 0.8125rem;
+    font-family: var(--mono);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 0.375rem;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 1rem;
+  }
+  dl {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 0.5rem 1rem;
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+  dt {
+    font-weight: 600;
+  }
+  dd {
+    margin: 0;
+    color: var(--muted);
+  }
+  @media (max-width: 560px) {
+    header {
+      flex-direction: column;
+    }
+    dl {
+      grid-template-columns: 1fr;
+      gap: 0.125rem;
+    }
+    dd {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @media print {
+    @page {
+      size: Letter;
+      margin: 0.55in 0.6in;
+    }
+    :global(header:not(.cv header)),
+    :global(footer),
+    :global(.skip),
+    .pdf {
+      display: none !important;
+    }
+    :global(body) {
+      font-size: 9.5pt;
+      line-height: 1.35;
+      background: #fff;
+    }
+    :global(.section) {
+      padding: 0 !important;
+    }
+    :global(.wrap) {
+      padding: 0 !important;
+      max-width: none;
+    }
+    .cv {
+      max-width: none;
+    }
+    h1 {
+      font-size: 20pt;
+    }
+    .headline {
+      font-size: 11pt;
+      margin-bottom: 0.3rem;
+    }
+    .skills {
+      margin-top: 1.1rem;
+    }
+    .skills h2 {
+      margin-bottom: 0.5rem;
+      break-after: avoid;
+    }
+    dl {
+      font-size: 0.875rem;
+      gap: 0.15rem 1rem;
+    }
+  }
+</style>
