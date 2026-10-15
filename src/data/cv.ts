@@ -5,7 +5,7 @@ export const profile = {
   shortName: 'Eduardo Rivera',
   headline: 'Data scientist and economist',
   tagline:
-    'I build statistical models and data pipelines for questions about markets, labor and public policy. Eight years across an antitrust agency, a central bank and industry; now in the Master of Data Science at UBC.',
+    'I build statistical models and data pipelines for questions about markets, labor and public policy. Eight years across an antitrust agency, a central bank and industry, and a Master of Data Science from UBC (2026). Open to data science roles.',
   location: 'Vancouver, BC',
   email: 'ef.riveras@gmail.com',
   github: 'https://github.com/e-riveras',
@@ -33,12 +33,12 @@ export const experience: Entry[] = [
     title: 'Graduate Research Assistant',
     org: 'Talhouk Research Lab, UBC Faculty of Medicine',
     place: 'Vancouver, BC',
-    dates: '2025 – present',
+    dates: '2025 – Aug 2026',
     points: [
-      'Builds secure, reproducible analysis pipelines in R to study health outcomes across distributed networks.',
-      'Implements federated learning protocols so sensitive health data never leaves partner sites.',
-      'Designs standardized meta-analysis frameworks to validate multi-site data.',
-      'Automates workflows for partner institutions with renv and Git.',
+      'Built secure, reproducible analysis pipelines in R to study health outcomes across distributed networks.',
+      'Implemented federated learning protocols so sensitive health data never left partner sites.',
+      'Designed standardized meta-analysis frameworks to validate multi-site data.',
+      'Automated workflows for partner institutions with renv and Git.',
     ],
   },
   {
@@ -103,7 +103,7 @@ export const education: Entry[] = [
     title: 'Master of Data Science',
     org: 'University of British Columbia',
     place: 'Vancouver, BC',
-    dates: '2025 – present',
+    dates: '2025 – Jun 2026',
     points: [
       'Machine learning, causal inference, Bayesian statistics, high-dimensional data, convex optimization, experimental design.',
       'Elected International Student Representative.',
@@ -177,7 +177,7 @@ export const service: Entry[] = [
   {
     title: 'International Student Representative',
     org: 'Master of Data Science, UBC',
-    dates: '2025 – present',
+    dates: '2025 – Jan 2026',
   },
   {
     title: 'Graduate Student Representative, admissions committee',
