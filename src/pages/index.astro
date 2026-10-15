@@ -19,6 +19,8 @@ const posts = (await getPosts()).slice(0, 3);
       <h1>{profile.name}</h1>
       <p class="lede">{profile.tagline}</p>
       <ul class="tags">{profile.interests.map((i) => <li>{i}</li>)}</ul>
+      <p class="tools"><span>Tools</span> {profile.tools.join(' · ')}</p>
+      <p class="availability">{profile.availability}</p>
       <p class="actions">
         <a class="btn primary" href="/projects/">See projects</a>
         <a class="btn" href="/cv.pdf">Download CV</a>
@@ -100,6 +102,36 @@ const posts = (await getPosts()).slice(0, 3);
     color: var(--muted);
     max-width: 38rem;
     margin: 0 0 1.25rem;
+  }
+  .tools {
+    margin: 0.875rem 0 0;
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+  .tools span {
+    color: var(--faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.6875rem;
+    margin-right: 0.5rem;
+  }
+  .availability {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin: 1.25rem 0 0;
+    font-weight: 550;
+  }
+  .availability::before {
+    content: '';
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #16a34a;
+    box-shadow: 0 0 0 3px color-mix(in srgb, #16a34a 25%, transparent);
+    transform: translateY(-0.1rem);
   }
   .portrait {
     width: 240px;

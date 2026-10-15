@@ -5,7 +5,11 @@ export const profile = {
   shortName: 'Eduardo Rivera',
   headline: 'Data scientist and economist',
   tagline:
-    'I build statistical models and data pipelines for questions about markets, labor and public policy. Eight years across an antitrust agency, a central bank and industry, and a Master of Data Science from UBC (2026). Open to data science roles.',
+    'I build statistical models and data pipelines for questions about markets, labor and public policy. Eight years across an antitrust agency, a central bank and industry, and a Master of Data Science from UBC (2026).',
+  availability: 'Available now for contract or permanent roles in Vancouver or remote Canada.',
+  // Search-result snippet; keep under ~155 characters.
+  description:
+    'Vancouver data scientist and economist. Bayesian and causal modelling, Python, SQL, R. Ex-central bank and antitrust. Open to contract or perm.',
   location: 'Vancouver, BC',
   email: 'ef.riveras@gmail.com',
   github: 'https://github.com/e-riveras',
@@ -18,6 +22,7 @@ export const profile = {
     'Policy evaluation',
     'Market design',
   ],
+  tools: ['Python', 'SQL', 'R', 'PyMC', 'pandas', 'scikit-learn', 'Git'],
 };
 
 export type Entry = {
