@@ -24,6 +24,7 @@ const posts = (await getPosts()).slice(0, 3);
       <p class="actions">
         <a class="btn primary" href="/projects/">See projects</a>
         <a class="btn" href="/cv.pdf">Download CV</a>
+        <a class="btn" href={`mailto:${profile.email}`}>Email</a>
         <a class="btn" href={profile.github}>GitHub</a>
         <a class="btn" href={profile.linkedin}>LinkedIn</a>
       </p>

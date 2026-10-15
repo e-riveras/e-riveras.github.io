@@ -72,7 +72,7 @@ export const experience: Entry[] = [
     title: 'Economist',
     org: 'Fiscalía Nacional Económica (antitrust agency)',
     place: 'Santiago, Chile',
-    dates: 'Aug 2018 – Aug 2022',
+    dates: 'Nov 2018 – Sep 2022',
     points: [
       'Studies Division (2018–2020), then Antitrust Division Intelligence Unit (2020–2022).',
       'Screened markets for abuse of market power; developed algorithmic tools to detect bid-rigging.',
@@ -84,7 +84,7 @@ export const experience: Entry[] = [
     title: 'Risk Specialist',
     org: 'BancoEstado Microempresas',
     place: 'Santiago, Chile',
-    dates: 'Oct 2017 – 2018',
+    dates: 'Dec 2017 – Oct 2018',
     points: [
       'Built credit scoring models with generalized regression neural networks for pre-approval campaigns.',
       'Developed non-linear optimization tools to set interest rate tiers by customer segment.',
